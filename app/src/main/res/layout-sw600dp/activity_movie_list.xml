@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        style="@style/PopupTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="?attr/colorPrimary">
+
+            <LinearLayout
+                android:id="@+id/search_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/white"
+                android:gravity="end|center_vertical">
+
+                <TextView
+                    android:id="@+id/results_title"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:onClick="onSearchClicked"
+                    android:text="@string/action_search" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/submit_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/search_term"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_weight="1"
+                    android:hint="@string/search_text_hint"
+                    android:imeActionLabel="@string/action_search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:onClick="onSubmitClicked"
+                    android:text="@string/action_submit" />
+
+            </LinearLayout>
+
+        </android.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="280dp"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/fragment_details_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

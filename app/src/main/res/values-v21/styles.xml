@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="ItemStyle">
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/margin_small</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:background">@color/gray_light</item>
+    </style>
+
+</resources>

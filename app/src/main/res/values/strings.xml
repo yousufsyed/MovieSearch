@@ -1,0 +1,23 @@
+<resources>
+    <bool name="isTablet">false</bool>
+
+    <string name="app_name">MovieSearch</string>
+    <string name="no_results_found">No results found</string>
+    <string name="loading_next">Loading next...</string>
+
+    <string name="network_unavailable">Network unavailable.</string>
+    <string name="network_request_failed">Network request failed.</string>
+    <string name="empty_field">Search field cannot be empty.</string>
+    <string name="action_search">Search</string>
+    <string name="search_text_hint">Search Text</string>
+    <string name="action_submit">Submit</string>
+
+    <string name="results_for">Results for \'%1$s\'</string>
+    <string name="title_string">Title: %1$s</string>
+    <string name="overview_string">Overview: %1$s</string>
+    <string name="language_string">Language: %1$s</string>
+    <string name="vote_count_string">Votes: %1$s</string>
+    <string name="vote_average_string">Votes average: %1$s</string>
+    <string name="popularity_string">Popularity on: %1$s</string>
+    <string name="releaseDate_string">Released on: %1$s</string>
+</resources>
